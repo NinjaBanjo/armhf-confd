@@ -7,4 +7,8 @@ RUN go get -d -v github.com/kelseyhightower/confd && \
 
 WORKDIR /app
 
+ARG VERSION=v0.16.0
+
+RUN git checkout $VERSION
+
 RUN make
